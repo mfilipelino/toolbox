@@ -18,4 +18,11 @@ setuptools.setup(
     license='MIT',
     packages=['toolbox'],
     install_requires=['requests'],
+    extras_require={
+        'dev': [
+            'pytest>=7.4.0',
+            'pytest-cov>=4.1.0',
+        ],
+    },
+    python_requires='>=3.6',
 )

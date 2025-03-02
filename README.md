@@ -8,9 +8,14 @@ custom Python package that is installable from your GitHub repo!
 
 ## Installation and updating
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Toolbox like below. 
-Rerun this command to check for and install  updates .
+Rerun this command to check for and install updates.
 ```bash
 pip install git+https://github.com/Muls/toolbox
+```
+
+For development including testing capabilities:
+```bash
+pip install -e ".[dev]"
 ```
 
 ## Usage
@@ -31,6 +36,20 @@ report(message)
 list_of_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 for chunk in toolbox.functions.listChunker(lst=list_of_numbers, csize=3):
     print(chunk)
+```
+
+## Testing
+This package uses pytest for testing. To run the tests:
+
+```bash
+# Run all tests
+pytest
+
+# Run tests with coverage report
+pytest --cov=toolbox
+
+# Run tests with verbose output
+pytest -v
 ```
 
 ## Contributing
